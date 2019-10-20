@@ -1,4 +1,8 @@
-public class CoreFunctions {/*private double num13;
+package com.zipcodewilmington.scientificcalculator;
+
+public class CoreFunctions {
+
+    /*private double num13;
     private double num2;
     private double answer;
 

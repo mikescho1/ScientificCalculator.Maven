@@ -1,9 +1,12 @@
-public class TestCoreFunctions
+package com.zipcodewilmington.scientificcalculator;
+import org.junit.Assert;
 
-{@org.junit.Before
-public void setUp() throws Exception {
+public class TestCoreFunctions {
 
-}
+    @org.junit.Before
+    public void setUp() throws Exception {
+
+    }
 
     @org.junit.After
     public void tearDown() throws Exception {
