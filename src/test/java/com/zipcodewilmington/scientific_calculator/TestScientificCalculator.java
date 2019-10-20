@@ -37,21 +37,39 @@ public class TestScientificCalculator {
     }
 
     @org.junit.Test
-    public void testarcCosine(){
+    public void testinverseCosineRad(){
         ScientificCalculator testarcCosine = new ScientificCalculator();
 
-        assertEquals(0, testarcCosine.inverseCosine(1),0.0);
-        assertEquals(1.5707963267948966, testarcCosine.inverseCosine(0),0.0);
-        assertEquals(3.141592653589793, testarcCosine.inverseCosine(-1),0.0);
+        assertEquals(0, testarcCosine.inverseCosineRad(1),0.0);
+        assertEquals(1.5707963267948966, testarcCosine.inverseCosineRad(0),0.0);
+        assertEquals(3.141592653589793, testarcCosine.inverseCosineRad(-1),0.0);
     }
 
     @org.junit.Test
-    public void testarcSine(){
+    public void testinverseCosineDeg(){
+        ScientificCalculator testarcCosineDeg = new ScientificCalculator();
+
+        assertEquals(0, testarcCosineDeg.inverseCosineRDeg(1),0.0);
+        assertEquals(90, testarcCosineDeg.inverseCosineRDeg(0),0.0);
+        assertEquals(180, testarcCosineDeg.inverseCosineRDeg(-1),0.0);
+    }
+
+    @org.junit.Test
+    public void testinverseSineRad(){
         ScientificCalculator testarcSine = new ScientificCalculator();
 
-        assertEquals(1.5707963267948966, testarcSine.inverseSine(1),0.0);
-        assertEquals(0.0, testarcSine.inverseSine(0),0.0);
-        assertEquals(-1.5707963267948966, testarcSine.inverseSine(-1),0.0);
+        assertEquals(1.5707963267948966, testarcSine.inverseSineRad(1),0.0);
+        assertEquals(0.0, testarcSine.inverseSineRad(0),0.0);
+        assertEquals(-1.5707963267948966, testarcSine.inverseSineRad(-1),0.0);
+    }
+
+    @org.junit.Test
+    public void testinverseSineDeg(){
+        ScientificCalculator testarcSineDeg = new ScientificCalculator();
+
+        assertEquals(90, testarcSineDeg.inverseSineDeg(1),0.0);
+        assertEquals(0.0, testarcSineDeg.inverseSineDeg(0),0.0);
+        assertEquals(-90, testarcSineDeg.inverseSineDeg(-1),0.0);
     }
 
     @org.junit.Test
@@ -93,22 +111,42 @@ public class TestScientificCalculator {
     }
 
     @org.junit.Test
-    public void testTangent(){
+    public void testTangentRad(){
         ScientificCalculator testTangent = new ScientificCalculator();
 
-        assertEquals(0.6483608274590866, testTangent.calculateTangent(10),0.0);
-        assertEquals(-0.6483608274590866, testTangent.calculateTangent(-10),0.0);
-        assertEquals(1.3386902103511544, testTangent.calculateTangent(180),0.0);
+        assertEquals(0.6483608274590866, testTangent.calculateTangentRad(10),0.0);
+        assertEquals(-0.6483608274590866, testTangent.calculateTangentRad(-10),0.0);
+        assertEquals(1.3386902103511544, testTangent.calculateTangentRad(180),0.0);
 
     }
 
     @org.junit.Test
-    public void testinverseTangent(){
-        ScientificCalculator testinvTangent = new ScientificCalculator();
+    public void testTangentDeg(){
+        ScientificCalculator testTangentDeg = new ScientificCalculator();
 
-        assertEquals(1.5208379310729538, testinvTangent.inverseTangent(20),0.0);
-        assertEquals(-1.4711276743037347, testinvTangent.inverseTangent(-10),0.0);
-        assertEquals(1.565240828394204, testinvTangent.inverseTangent(180),0.0);
+        assertEquals(37.14833901501544, testTangentDeg.calculateTangentDeg(10),0.0);
+        assertEquals(-37.14833901501544, testTangentDeg.calculateTangentDeg(-10),0.0);
+        assertEquals(76.70129912860153, testTangentDeg.calculateTangentDeg(180),0.0);
+
+    }
+
+    @org.junit.Test
+    public void testinverseTangentRad(){
+        ScientificCalculator testinvTangentRad = new ScientificCalculator();
+
+        assertEquals(1.5208379310729538, testinvTangentRad.inverseTangentRad(20),0.0);
+        assertEquals(-1.4711276743037347, testinvTangentRad.inverseTangentRad(-10),0.0);
+        assertEquals(1.565240828394204, testinvTangentRad.inverseTangentRad(180),0.0);
+
+    }
+
+    @org.junit.Test
+    public void testinverseTangentDeg(){
+        ScientificCalculator testinvTangentDeg = new ScientificCalculator();
+
+        assertEquals(87.13759477388825, testinvTangentDeg.inverseTangentDeg(20),0.0);
+        assertEquals(-84.28940686250037, testinvTangentDeg.inverseTangentDeg(-10),0.0);
+        assertEquals(89.68169338854864, testinvTangentDeg.inverseTangentDeg(180),0.0);
 
     }
 
@@ -151,9 +189,13 @@ public class TestScientificCalculator {
     @org.junit.Test
     public void genericTest(){
 
-        System.out.println("Tan method: " + Math.log(6));
-        System.out.println("Tan method: " + Math.log(1));
-        System.out.println("Tan method: " + Math.log(180));
+
+
+
+        System.out.println("Tan method: " + Math.atan(180));
+        System.out.println("Tan method: " + Math.toDegrees(Math.atan(180)));
+
+
     }
 }
 
