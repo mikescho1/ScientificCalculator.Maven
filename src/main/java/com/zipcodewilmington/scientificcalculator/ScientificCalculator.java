@@ -52,18 +52,26 @@ public class ScientificCalculator {
 
 
 
-    public double calculateLog(double lgNumber) {
+    public double calcLog(double lgNumber) {
         // needs to be greater than zero; base e
+        /* If the argument is NaN or less than zero, then the result is NaN.
+If the argument is positive infinity, then the result is positive infinity.
+If the argument is positive zero or negative zero, then the result is negative infinity.*/
+        return Math.log10(lgNumber);
+    }
+
+    public double calculateInverseLog(double lgNumber) {
+        return 1 / (calcLog(lgNumber));
+    }
+    //I think inverse log is the same as number to the power of x;
+
+    public double calculateNatLogarithm(double lgNumber) {
+
         return Math.log(lgNumber);
     }
 
-    public String calculateInverseLog() {
-        return null;
-    }
-
-    public double calculateNatLogarithm(double numberLG) {
-
-        return Math.log1p(numberLG);
+    public double calculateInverseNaturalLog(double lgNumber)   {
+        return 1 / (calculateNatLogarithm(lgNumber));
     }
 
     public double calculateExponent(double baseNumber, double expNumber) {

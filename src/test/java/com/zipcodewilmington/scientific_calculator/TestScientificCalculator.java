@@ -9,13 +9,11 @@ public class TestScientificCalculator {
     ///System.out.println("Sin method: " + Math.sin(nrSine));
 
     @org.junit.Before
-    public void setUp()
-    {
+    public void setUp()throws Exception {
     }
 
     @org.junit.After
-    public void tearDown()
-    {
+    public void tearDown()throws Exception {
     }
 
     //  *************  actual tests bellow  ***********
@@ -118,36 +116,36 @@ public class TestScientificCalculator {
     public void testLogarithm(){
         ScientificCalculator testLog = new ScientificCalculator();
 
-        assertEquals(1.791759469228055, testLog.calculateLog(6),0.0);
-        assertEquals(0.0, testLog.calculateLog(1),0.0);
-        assertEquals(5.19295685089021, testLog.calculateLog(180),0.0);
+        assertEquals(2, testLog.calcLog(100),0.0);
+        assertEquals(1.6989700043360187, testLog.calcLog(50),0.0);
+        assertEquals(1.3979400086720377, testLog.calcLog(25),0.0);
     }
 
     @org.junit.Test
     public void testInverseLog(){
         ScientificCalculator testFactorial = new ScientificCalculator();
 
-        assertEquals(6, testFactorial.calculateFactorial(3));
-        assertEquals(720, testFactorial.calculateFactorial(6));
-        assertEquals(3628800, testFactorial.calculateFactorial(10));
+        assertEquals(0.5, testFactorial.calculateInverseLog(100), 0.00);
+        assertEquals(1.2850972089384687, testFactorial.calculateInverseLog(6), 0.00);
+        assertEquals(0.33460942696089374, testFactorial.calculateInverseLog(974), 0.00);
     }
 
     @org.junit.Test
     public void testNatLogarithm(){
         ScientificCalculator testFactorial = new ScientificCalculator();
 
-        assertEquals(6, testFactorial.calculateFactorial(3));
-        assertEquals(720, testFactorial.calculateFactorial(6));
-        assertEquals(3628800, testFactorial.calculateFactorial(10));
+        assertEquals(4.605170185988092, testFactorial.calculateNatLogarithm(100), 0.00);
+        assertEquals(8.37930948405285, testFactorial.calculateNatLogarithm(4356), 0.00);
+        assertEquals(2.302585092994046, testFactorial.calculateNatLogarithm(10), 0.00);
     }
 
     @org.junit.Test
     public void testinvNatLogarithm(){
         ScientificCalculator testFactorial = new ScientificCalculator();
 
-        assertEquals(6, testFactorial.calculateFactorial(3));
-        assertEquals(720, testFactorial.calculateFactorial(6));
-        assertEquals(3628800, testFactorial.calculateFactorial(10));
+        assertEquals(6, testFactorial.calculateInverseNaturalLog(3));
+        assertEquals(720, testFactorial.calculateInverseNaturalLog(6));
+        assertEquals(3628800, testFactorial.calculateInverseNaturalLog(10));
     }
 
     @org.junit.Test
