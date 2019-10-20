@@ -15,11 +15,7 @@ public class MainApplication {
         Double num2 = Console.getDoubleInput("Enter second number or an operation (+, -, *, /, p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
         String operation = Console.getStringInput("What operation? (+, -, *, /, p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
         char cases = operation.charAt(0);
-        /*while (num2 == cases) {
-            do {
-                switch (cases) {
-                }
-                Console.println("Your numbers are %s", num1 + " " + "and" + " " + num2);
+
 
 */
                 switch (cases) {
