@@ -21,11 +21,17 @@ public class MainApplication {
         Double num1 = Console.getDoubleInput("Enter first number:");
         Console.println("First number is %s", num1);
 
+<<<<<<< HEAD
         String operation = Console.getStringInput("Enter second number or an operation (p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
         Double num2 = Console.getDoubleInput("Enter second number (+, -, *, /, p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
 
 
 
+=======
+        Double num2 = Console.getDoubleInput("Enter second number or an operation (+, -, *, /, p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
+        String operation = Console.getStringInput("What operation? (+, -, *, /, p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
+        char cases = operation.charAt(0);
+>>>>>>> e3bd6b5e15e9099549e423d272e8a86f34bc88eb
 
 
             switch (operation) {
