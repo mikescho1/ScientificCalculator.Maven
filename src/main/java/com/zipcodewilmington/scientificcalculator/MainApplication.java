@@ -19,7 +19,7 @@ public class MainApplication {
             do switch (cases) {
                 if (num2 != cases) {
 
-                }
+
                 continue;
                 //Console.println("Your numbers are %s", num1 + " " + "and" + " " + num2);
 
