@@ -28,29 +28,50 @@ public class ScientificCalculator {
         return Math.cos(Math.toRadians(nrCosine));
     }
 
-    public double inverseSine(double arcNumber) {
+
+    public double inverseSineRad(double arcNumber) {
 
         // input needs to be between -1 and 1
         return Math.asin(arcNumber);
     }
 
-    public double inverseCosine(double arcNumber) {
+    public double inverseSineDeg(double arcNumber) {
+
+        // input needs to be between -1 and 1
+        return Math.toDegrees(Math.asin(arcNumber));
+    }
+
+    public double inverseCosineRad(double arcNumber) {
 
         // input needs to be between -1 and 1
         return Math.acos(arcNumber);
     }
 
-    public double calculateTangent(double tanNumber) {
+    public double inverseCosineRDeg(double arcNumber) {
+
+        // input needs to be between -1 and 1
+        return Math.toDegrees(Math.acos(arcNumber));
+    }
+
+    public double calculateTangentRad(double tanNumber) {
 
         return Math.tan(tanNumber);
     }
 
-    public double inverseTangent(double tanNumber) {
+    public double calculateTangentDeg(double tanNumber) {
+
+        return Math.toDegrees(Math.tan(tanNumber));
+    }
+
+    public double inverseTangentRad(double tanNumber) {
 
         return Math.atan(tanNumber);
     }
 
+    public double inverseTangentDeg(double tanNumber) {
 
+        return Math.toDegrees(Math.atan(tanNumber));
+    }
 
     public double calculateLog(double lgNumber) {
         // needs to be greater than zero; base e
@@ -78,7 +99,6 @@ public class ScientificCalculator {
         }
         return calcNumber;
     }
-
 
 }
 
