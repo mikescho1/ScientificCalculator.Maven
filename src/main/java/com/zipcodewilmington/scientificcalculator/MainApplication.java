@@ -1,5 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import com.sun.deploy.security.SelectableSecurityManager;
+
 /**
  * Created by Sandy Pham 10/20/19.
  */
@@ -9,37 +11,41 @@ public class MainApplication {
 
         CoreFunctions simpleMath = new CoreFunctions();
         Console.println("Welcome to cohort5.2 calculator!");
+        //String answerOne = Console.getStringInput("simple calculator (+ , - , *, /, square root, power, square), OR scientific calculator?");
+
+        //while (answerOne == "scientific calculator");
+
+
+
+
         Double num1 = Console.getDoubleInput("Enter first number:");
         Console.println("First number is %s", num1);
 
-        Double num2 = Console.getDoubleInput("Enter second number or an operation (+, -, *, /, p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
-        String operation = Console.getStringInput("What operation? (+, -, *, /, p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
-        char cases = operation.charAt(0);
-        /*while (num2 == cases) {
-            do {
-                switch (cases) {
-                }
-                Console.println("Your numbers are %s", num1 + " " + "and" + " " + num2);
+        String operation = Console.getStringInput("Enter second number or an operation (p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
+        Double num2 = Console.getDoubleInput("Enter second number (+, -, *, /, p for power, ^ for square, r for square root) For scientific calculator enter 'science'.");
 
-*/
-                switch (cases) {
 
-                    case '+':
+
+
+
+            switch (operation) {
+
+                    case "+":
                         answer = simpleMath.add(num1, num2);
                         System.out.println("" + num1 + " " + operation + " " + num2 + " " + "=" + " " + answer);
                         break;
 
-                    case '-':
+                    case "-":
                         answer = simpleMath.subtract(num1, num2);
                         System.out.println("" + num1 + " " + operation + " " + num2 + " " + "=" + " " + answer);
                         break;
 
-                    case '*':
+                    case "*":
                         answer = simpleMath.multiply(num1, num2);
                         System.out.println("" + num1 + " " + operation + " " + num2 + " " + "=" + " " + answer);
                         break;
 
-                    case '/':
+                    case "/":
                         if (num2 == 0) {
                             System.out.println("Err");
                         } else {
@@ -48,17 +54,17 @@ public class MainApplication {
                             break;
                         }
 
-                    case 'p':
+                    case "p":
                         answer = simpleMath.power(num1, num2);
                         System.out.println("" + num1 + " " + operation + " " + num2 + " " + "=" + " " + answer);
                         break;
 
-                    case 'r':
+                    case "r":
                         answer = simpleMath.squareRt(num1);
                         System.out.println("" + num1 + " " + operation + " " + num2 + " " + "=" + " " + answer);
                         break;
 
-                    case '^':
+                    case "^":
                         answer = simpleMath.square(num1);
                         System.out.println("" + num1 + " " + operation + " " + num2 + " " + "=" + " " + answer);
                         break;
