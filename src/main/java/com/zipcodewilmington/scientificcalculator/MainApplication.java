@@ -8,14 +8,17 @@ import com.sun.deploy.security.SelectableSecurityManager;
 public class MainApplication {
     public static void main(String[] args) {
         double answer;
-        boolean a = true;
+
 
         CoreFunctions simpleMath = new CoreFunctions();
         Console.println("Welcome to cohort5.2 calculator!");
         Integer answerOne = Console.getIntegerInput("Simple or science calculator? \n" +
                 "1 for simple \n2 for science");
         Integer operation;
+
+        while (boolean a = true){
         if (answerOne == 1) {
+
             operation = Console.getIntegerInput("Enter the number corresponding to the operation:\n" +
                     "1.) Addition \n" +
                     "2.) Subtraction \n" +
@@ -26,7 +29,9 @@ public class MainApplication {
                     "7.) Square Root\n" +
                     "8.) Invert\n" +
                     "9.) Inverse\n" +
-                    "10.) go back!");
+                    "10.) go back!\n" +
+                    "11.) clear display");
+
 
             switch (operation) {
 
@@ -35,6 +40,7 @@ public class MainApplication {
                     Double num2 = Console.getDoubleInput("Enter second number:");
                     answer = simpleMath.add(num1, num2);
                     System.out.println("" + num1 + " " + "+" + " " + num2 + " " + "=" + " " + answer);
+
                     break;
 
                 case 2:
@@ -94,6 +100,13 @@ public class MainApplication {
                     answer = simpleMath.inverse(num1);
                     System.out.println("Inverse of " + num1 + " " + "is " + answer);
                     break;
+
+                case 10:
+                    if (operation == 10) ;
+                    System.out.print("\033[H\033[2J");
+                    System.out.flush();
+                    a = false;
+
             }
         } else if (answerOne == 2) {
             ScientificCalculator scientific = new ScientificCalculator();
