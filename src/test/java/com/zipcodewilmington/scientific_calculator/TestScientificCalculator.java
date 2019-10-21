@@ -188,29 +188,6 @@ public class TestScientificCalculator {
         assertEquals(3628800, testFactorial.calculateInverseNaturalLog(10));
     }
 
-    @org.junit.Test
-    public void genericTest(){
 
-       String sentence = "abc";  // expected bcd
-       int moveover = 0;
-       String [] words;
-
-       String newWord = "";
-       int iLoop = sentence.length();
-
-       for (int i=0; i<iLoop; i++){
-           System.out.println(sentence.charAt(i));
-           words[i] = sentence.charAt(i);
-
-           //newWord += words[i].charAt(0);
-
-       }
-
-        //System.out.println(acronym);
-        //System.out.println(wordText);
-        //System.out.println("Tan method: " + Math.toDegrees(Math.atan(180)));
-
-
-    }
 }
 
