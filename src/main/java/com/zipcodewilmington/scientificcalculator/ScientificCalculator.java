@@ -73,32 +73,52 @@ public class ScientificCalculator {
         return Math.toDegrees(Math.atan(tanNumber));
     }
 
-    public double calculateLog(double lgNumber) {
+    public double calcLog(double lgNumber) {
         // needs to be greater than zero; base e
+        /* If the argument is NaN or less than zero, then the result is NaN.
+If the argument is positive infinity, then the result is positive infinity.
+If the argument is positive zero or negative zero, then the result is negative infinity.*/
+        return Math.log10(lgNumber);
+    }
+    public double calcLogDegree(double lgNumber) {
+        return Math.toDegrees(Math.log10(lgNumber));
+    }
+    public double calculateInverseLog(double lgNumber) {
+        return (1 / (calcLog(lgNumber)));
+    }
+    public double calculateInverseLogDegree(double lgNumber) {
+        return Math.toDegrees((1/calcLog(lgNumber)));
+    }
+    //I think inverse log is the same as number to the power of x;
+
+    public double calculateNatLogarithm(double lgNumber) {
+
         return Math.log(lgNumber);
     }
+    public double calculateNatLogarithmDegree(double lgNumber) {
 
-    public String calculateInverseLog() {
-        return null;
+        return Math.toDegrees(Math.log(lgNumber));
     }
 
-    public double calculateNatLogarithm(double numberLG) {
-
-        return Math.log1p(numberLG);
+    public double calculateInverseNaturalLog(double lgNumber)   {
+        return 1 / (calculateNatLogarithm(lgNumber));
     }
-
+    public double calculateInverseNaturalLogDegree(double lgNumber) {
+        return Math.toDegrees(1 / (calculateNatLogarithm(lgNumber)));
+    }
     public double calculateExponent(double baseNumber, double expNumber) {
 
         return Math.pow(baseNumber, expNumber);
     }
 
-    public int calculateFactorial(int factNumber) {
-        int calcNumber = 1;
-        for (int i=1; i<=factNumber; i++){
+    public double calculateFactorial(double factNumber) {
+        double calcNumber = 1;
+        for (double i=1; i<=factNumber; i++){
             calcNumber = calcNumber * i;
         }
         return calcNumber;
     }
+
 
 }
 
