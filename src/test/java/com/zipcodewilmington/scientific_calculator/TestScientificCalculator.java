@@ -2,6 +2,8 @@ package com.zipcodewilmington.scientific_calculator;
 import com.zipcodewilmington.scientificcalculator.ScientificCalculator;
 
 
+import java.util.Locale;
+
 import static  org.junit.Assert.*;
 
 public class TestScientificCalculator {
@@ -189,11 +191,24 @@ public class TestScientificCalculator {
     @org.junit.Test
     public void genericTest(){
 
+       String sentence = "abc";  // expected bcd
+       int moveover = 0;
+       String [] words;
 
+       String newWord = "";
+       int iLoop = sentence.length();
 
+       for (int i=0; i<iLoop; i++){
+           System.out.println(sentence.charAt(i));
+           words[i] = sentence.charAt(i);
 
-        System.out.println("Tan method: " + Math.atan(180));
-        System.out.println("Tan method: " + Math.toDegrees(Math.atan(180)));
+           //newWord += words[i].charAt(0);
+
+       }
+
+        //System.out.println(acronym);
+        //System.out.println(wordText);
+        //System.out.println("Tan method: " + Math.toDegrees(Math.atan(180)));
 
 
     }
