@@ -39,6 +39,7 @@ public class CoreFunctions {
         return /*this.answer =*/ num1 / -1;
     }
 
+    public double calcAverage(double num1, double num2) { return (num1 + num2) / 2;}
 
 
 

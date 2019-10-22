@@ -85,5 +85,10 @@ public class TestCoreFunctions {
         Assert.assertEquals(10, inverse1.inverse(-10), 0.00);
         Assert.assertEquals(-.005, inverse1.inverse(.005), 0.00);
     }
+    @org.junit.Test
+    public void calcAverage()   {
+        CoreFunctions average1 = new CoreFunctions();
+        Assert.assertEquals(10, average1.calcAverage(5, 15), 0.00);
+    }
 }
 

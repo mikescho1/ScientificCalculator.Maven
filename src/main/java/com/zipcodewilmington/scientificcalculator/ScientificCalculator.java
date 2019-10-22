@@ -118,7 +118,9 @@ If the argument is positive zero or negative zero, then the result is negative i
         }
         return calcNumber;
     }
-
+    public double calcAbsValue(double num1) {
+        return Math.abs(num1);
+    }
 
 }
 
