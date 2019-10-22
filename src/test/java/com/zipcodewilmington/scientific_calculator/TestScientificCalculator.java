@@ -1,5 +1,6 @@
 package com.zipcodewilmington.scientific_calculator;
 import com.zipcodewilmington.scientificcalculator.ScientificCalculator;
+import org.junit.Assert;
 
 
 import static  org.junit.Assert.*;
@@ -187,15 +188,16 @@ public class TestScientificCalculator {
     }
 
     @org.junit.Test
-    public void genericTest(){
+        public void calcAbsValue()  {
+        ScientificCalculator absVal1 = new ScientificCalculator();
+        Assert.assertEquals(5, absVal1.calcAbsValue(-5), 0.00);
+        Assert.assertEquals(997, absVal1.calcAbsValue(997), 0.00);
+        Assert.assertEquals(44, absVal1.calcAbsValue(-44), 0.00);
+
+        }
 
 
-
-
-        System.out.println("Tan method: " + Math.atan(180));
-        System.out.println("Tan method: " + Math.toDegrees(Math.atan(180)));
-
-
-    }
 }
+
+
 
