@@ -28,8 +28,8 @@ public class MainApplication {
                         "3.) Multiplication \n" +
                         "4.) Division \n" +
                         "5.) Power of\n" +
-                        "6.) Square of\n" +
-                        "7.) Square Root\n" +
+                        "6.) Square Root\n" +
+                        "7.) Square of\n" +
                         "8.) Invert\n" +
                         "9.) Inverse\n" +
                         "10.) go back!\n");
@@ -62,14 +62,12 @@ public class MainApplication {
                     case 4:
                         num1 = Console.getDoubleInput("Enter first number:");
                         num2 = Console.getDoubleInput("Enter second number:");
-                        if (num2 == 0) {
-                            System.out.println("Err");
-                        } else {
-                            num1 = Console.getDoubleInput("Enter first number:");
-                            num2 = Console.getDoubleInput("Enter second number:");
-                            answer = simpleMath.divide(num1, num2);
-                            System.out.println("" + num1 + " " + "/" + " " + num2 + " " + "=" + " " + answer);
-                            break;
+                        if (num2 != 0){
+                        answer = simpleMath.divide(num1, num2);
+                        System.out.println("" + num1 + " " + "/" + " " + num2 + " " + "=" + " " + answer);
+                        break;
+                    }else{
+                        System.out.println("Err");
                         }
 
                     case 5:
